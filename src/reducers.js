@@ -1,4 +1,4 @@
-import { ADD_TODO, TOGGLE_TODO, SET_VISIBILITY_FILTER } from './actions';
+import { ADD_TODO, TOGGLE_TODO, SET_VISIBILITY_FILTER, REMOVE_TODO } from './actions';
 
 const initialState = {
     todos: [{
@@ -34,6 +34,10 @@ function TodoApp(state = initialState, action) {
 
                     return todo;
                 })
+            });
+        case REMOVE_TODO:
+            return Object.assign({}, state, {
+                todos: state.todos.filter(t => t.id !== action.id)
             });
         case SET_VISIBILITY_FILTER:
             return Object.assign({}, state, {
