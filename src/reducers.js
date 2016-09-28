@@ -2,11 +2,12 @@ import { ADD_TODO, TOGGLE_TODO } from './actions';
 
 const initialState = {
     todos: [{
-        text: 'hello you',
+        text: 'hello youse',
         id: 1
     }]
 };
 
+let nextId = 2;
 function TodoApp(state = initialState, action) {
     switch (action.type) {
         case ADD_TODO:
@@ -15,7 +16,8 @@ function TodoApp(state = initialState, action) {
                     ...state.todos,
                     {
                         text: action.text,
-                        completed: false
+                        completed: false,
+                        id: nextId++
                     }
                 ]
             });
