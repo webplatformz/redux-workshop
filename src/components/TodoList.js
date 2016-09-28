@@ -1,14 +1,26 @@
 import React from 'react';
 import Todo from './Todo';
+import {connect} from 'react-redux';
 
-const TodoList = ({ todos, onTodoClick }) => (
+const List = ({ todos }) => (
     <ul>
-        {todos.map(todo => {
+        {todos.map(todo =>
             <Todo
                 key={todo.id}
                 {...todo}
-                onClick={() => onTodoClick(todo.id)}
             />
-        })}
+        )}
     </ul>
 );
+
+const mapStateToProps = (state) => {
+    return {
+        todos: state.todos
+    }
+};
+
+const TodoList = connect(
+    mapStateToProps
+)(List);
+
+export default TodoList;

@@ -1,7 +1,10 @@
 import { ADD_TODO, TOGGLE_TODO } from './actions';
 
 const initialState = {
-    todos: []
+    todos: [{
+        text: 'hello you',
+        id: 1
+    }]
 };
 
 function TodoApp(state = initialState, action) {
