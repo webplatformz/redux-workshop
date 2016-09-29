@@ -1,15 +1,10 @@
-import React from 'react';
-import {render} from 'react-dom';
-import {Provider} from 'react-redux';
-import {createStore} from 'redux';
-import todoApp from './reducers';
-import App from './components/App';
+import add from './calculator';
+import {ADD_TODO, TOGGLE_TODO, SET_VISIBILITY} from './constants';
 
-let store = createStore(todoApp);
+console.log(add(1, 2));
+console.log(ADD_TODO);
+console.log(TOGGLE_TODO);
+console.log(SET_VISIBILITY);
 
-render(
-    <Provider store={store}>
-        <App />
-    </Provider>,
-    document.getElementById('root')
-);
+// bundle with      $ webpack --progress --colors --watch
+// run server with  $ npm run dev
