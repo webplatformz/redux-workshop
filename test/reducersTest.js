@@ -2,7 +2,7 @@ import deepFreeze from 'deep-freeze';
 import reducer from '../src/reducers';
 import {addTodo, toggleTodo, removeTodo, setVisibilityFilter} from '../src/actions';
 
-describe('ToDoAppReducers', function() {
+xdescribe('ToDoAppReducers', function() {
 
     const initialState = {
         todos: [{

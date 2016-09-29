@@ -1,13 +1,9 @@
 import React from 'react';
-import TodoListContainer from '../containers/TodoListContainer';
-import AddTodo from '../containers/AddTodo';
-import Footer from '../components/Footer';
+import TodoList from './TodoList';
 
 const App = () => (
     <div>
-        <AddTodo />
-        <TodoListContainer />
-        <Footer />
+        <TodoList />
     </div>
 );
 
