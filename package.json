@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "lite-server"
+    "dev": "lite-server",
+    "webpack": "webpack",
+    "build": "webpack --progress --colors --watch"
   },
   "repository": {
     "type": "git",
