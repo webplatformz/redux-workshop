@@ -36,6 +36,13 @@ describe('ToDoAppReducers', function() {
 
             expect(newState.todos[0].completed).toBe(true);
         });
+
+        xit('should remove a todo when dispatching REMOVE_TODO', function() {
+            var id = 1;
+            let newState = reducer(initialState, removeTodo(id));
+
+            expect(newState.todos.length).toBe(0);
+        });
     });
 
 });
