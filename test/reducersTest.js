@@ -31,13 +31,15 @@ describe('ToDoAppReducers', function() {
         });
 
         it('should toggle a todo when dispatching TOGGLE_TODO', function() {
-            let newState = reducer(initialState, toggleTodo(1));
+            var id = 1;
+            let newState = reducer(initialState, toggleTodo(id));
 
             expect(newState.todos[0].completed).toBe(true);
         });
 
         it('should remove a todo when dispatching REMOVE_TODO', function() {
-            let newState = reducer(initialState, removeTodo(1));
+            var id = 1;
+            let newState = reducer(initialState, removeTodo(id));
 
             expect(newState.todos.length).toBe(0);
         });
