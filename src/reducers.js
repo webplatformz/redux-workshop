@@ -1,3 +1,5 @@
+import {REMOVE_TODO} from './actions';
+
 const initialState = {
     todos: [{
         text: 'my first todo!',
@@ -7,7 +9,14 @@ const initialState = {
 };
 
 function TodoApp(state = initialState, action) {
-    return state;
+    switch (action.type) {
+        case REMOVE_TODO:
+            return Object.assign({}, state, {
+                todos: state.todos.filter(todo => todo.id !== action.id)
+            });
+        default:
+            return state;
+    }
 }
 
 export default TodoApp;

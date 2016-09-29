@@ -1,8 +1,9 @@
 import React from 'react';
 
-const Todo = ({text}) => (
+const Todo = ({text, onRemove}) => (
     <li>
         { text }
+        <span onClick={onRemove}>x</span>
     </li>
 );
 
