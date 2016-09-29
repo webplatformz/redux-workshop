@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "lite-server",
+    "karma": "karma",
     "test": "karma start"
   },
   "repository": {
@@ -30,7 +31,7 @@
     "karma-jasmine": "^0.3.5",
     "karma-webpack": "^1.8.0",
     "lite-server": "^2.2.2",
-    "webpack": "2.1.0-beta.23"
+    "webpack": "2.1.0-beta.25"
   },
   "dependencies": {
     "react": "^15.3.2",
